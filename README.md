@@ -8,3 +8,8 @@ Furniture Store Inventory Management System
 This is Milestone 1, where the object is to start a prototype for an inventory management system. 
 What is included in this repository is the UML diagram for a basic item setup, a lo-fidelity flowchart to demonstrate the flow of interactions,
 and a hi-fidelity demonstration of the inventory management system that is still a WIP. 
+
+---
+
+Milestone 2 update:
+Implemented Item and Warranty classes, applied testing within main form. All applicable work required for Milestone 2 grading is in Milestone2 folder.
