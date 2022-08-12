@@ -13,3 +13,8 @@ and a hi-fidelity demonstration of the inventory management system that is still
 
 Milestone 2 update:
 Implemented Item and Warranty classes, applied testing within main form. All applicable work required for Milestone 2 grading is in Milestone2 folder.
+
+---
+
+Milestone 3 update:
+Implemented InventoryManager class, updated Item class to include quantity value. Applied testing within main form with multiple additions including search function, adding item function, deleting item function, and restocking function. New Form added for adding item function. All gradable materials can be found in Milestone 3 subfolder, along with copies of classes created and edited. 
