@@ -37,8 +37,14 @@ namespace Prototype_for_Inventory_Management
         private void InitializeComponent()
         {
             this.coloredBackPanel = new System.Windows.Forms.Panel();
+            this.clearSearchButton = new System.Windows.Forms.Button();
+            this.restockCounter = new System.Windows.Forms.NumericUpDown();
+            this.restockItemButton = new System.Windows.Forms.Button();
+            this.qtyTextBox = new System.Windows.Forms.TextBox();
+            this.qtyLabel = new System.Windows.Forms.Label();
+            this.searchButton = new System.Windows.Forms.Button();
+            this.searchTextBox = new System.Windows.Forms.TextBox();
             this.deleteItemButton = new System.Windows.Forms.Button();
-            this.editItemButton = new System.Windows.Forms.Button();
             this.warrantyListBox = new System.Windows.Forms.ListBox();
             this.warrantyLabel = new System.Windows.Forms.Label();
             this.furnitureTypeTextbox = new System.Windows.Forms.TextBox();
@@ -55,14 +61,21 @@ namespace Prototype_for_Inventory_Management
             this.currInvLabel = new System.Windows.Forms.Label();
             this.currentInventoryListBox = new System.Windows.Forms.ListBox();
             this.coloredBackPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.restockCounter)).BeginInit();
             this.SuspendLayout();
             // 
             // coloredBackPanel
             // 
             this.coloredBackPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.coloredBackPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.coloredBackPanel.Controls.Add(this.clearSearchButton);
+            this.coloredBackPanel.Controls.Add(this.restockCounter);
+            this.coloredBackPanel.Controls.Add(this.restockItemButton);
+            this.coloredBackPanel.Controls.Add(this.qtyTextBox);
+            this.coloredBackPanel.Controls.Add(this.qtyLabel);
+            this.coloredBackPanel.Controls.Add(this.searchButton);
+            this.coloredBackPanel.Controls.Add(this.searchTextBox);
             this.coloredBackPanel.Controls.Add(this.deleteItemButton);
-            this.coloredBackPanel.Controls.Add(this.editItemButton);
             this.coloredBackPanel.Controls.Add(this.warrantyListBox);
             this.coloredBackPanel.Controls.Add(this.warrantyLabel);
             this.coloredBackPanel.Controls.Add(this.furnitureTypeTextbox);
@@ -83,23 +96,78 @@ namespace Prototype_for_Inventory_Management
             this.coloredBackPanel.Size = new System.Drawing.Size(538, 426);
             this.coloredBackPanel.TabIndex = 0;
             // 
+            // clearSearchButton
+            // 
+            this.clearSearchButton.Location = new System.Drawing.Point(126, 46);
+            this.clearSearchButton.Name = "clearSearchButton";
+            this.clearSearchButton.Size = new System.Drawing.Size(80, 23);
+            this.clearSearchButton.TabIndex = 23;
+            this.clearSearchButton.Text = "Clear";
+            this.clearSearchButton.UseVisualStyleBackColor = true;
+            this.clearSearchButton.Click += new System.EventHandler(this.clearSearchButton_Click);
+            // 
+            // restockCounter
+            // 
+            this.restockCounter.Location = new System.Drawing.Point(248, 377);
+            this.restockCounter.Name = "restockCounter";
+            this.restockCounter.Size = new System.Drawing.Size(100, 23);
+            this.restockCounter.TabIndex = 22;
+            // 
+            // restockItemButton
+            // 
+            this.restockItemButton.Location = new System.Drawing.Point(248, 351);
+            this.restockItemButton.Name = "restockItemButton";
+            this.restockItemButton.Size = new System.Drawing.Size(100, 23);
+            this.restockItemButton.TabIndex = 21;
+            this.restockItemButton.Text = "Restock Item";
+            this.restockItemButton.UseVisualStyleBackColor = true;
+            this.restockItemButton.Click += new System.EventHandler(this.restockItemButton_Click);
+            // 
+            // qtyTextBox
+            // 
+            this.qtyTextBox.Location = new System.Drawing.Point(367, 114);
+            this.qtyTextBox.Name = "qtyTextBox";
+            this.qtyTextBox.Size = new System.Drawing.Size(100, 23);
+            this.qtyTextBox.TabIndex = 20;
+            // 
+            // qtyLabel
+            // 
+            this.qtyLabel.AutoSize = true;
+            this.qtyLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.qtyLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.qtyLabel.Location = new System.Drawing.Point(368, 94);
+            this.qtyLabel.Name = "qtyLabel";
+            this.qtyLabel.Size = new System.Drawing.Size(56, 17);
+            this.qtyLabel.TabIndex = 19;
+            this.qtyLabel.Text = "Quantity";
+            // 
+            // searchButton
+            // 
+            this.searchButton.Location = new System.Drawing.Point(31, 46);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.Size = new System.Drawing.Size(80, 23);
+            this.searchButton.TabIndex = 18;
+            this.searchButton.Text = "Search";
+            this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
+            // 
+            // searchTextBox
+            // 
+            this.searchTextBox.Location = new System.Drawing.Point(42, 19);
+            this.searchTextBox.Name = "searchTextBox";
+            this.searchTextBox.PlaceholderText = "SKU# or Description";
+            this.searchTextBox.Size = new System.Drawing.Size(153, 23);
+            this.searchTextBox.TabIndex = 17;
+            // 
             // deleteItemButton
             // 
-            this.deleteItemButton.Location = new System.Drawing.Point(302, 380);
+            this.deleteItemButton.Location = new System.Drawing.Point(367, 351);
             this.deleteItemButton.Name = "deleteItemButton";
             this.deleteItemButton.Size = new System.Drawing.Size(100, 23);
             this.deleteItemButton.TabIndex = 16;
             this.deleteItemButton.Text = "Delete Item";
             this.deleteItemButton.UseVisualStyleBackColor = true;
-            // 
-            // editItemButton
-            // 
-            this.editItemButton.Location = new System.Drawing.Point(302, 351);
-            this.editItemButton.Name = "editItemButton";
-            this.editItemButton.Size = new System.Drawing.Size(100, 23);
-            this.editItemButton.TabIndex = 15;
-            this.editItemButton.Text = "Edit Item";
-            this.editItemButton.UseVisualStyleBackColor = true;
+            this.deleteItemButton.Click += new System.EventHandler(this.deleteItemButton_Click);
             // 
             // warrantyListBox
             // 
@@ -161,7 +229,7 @@ namespace Prototype_for_Inventory_Management
             // 
             // basePriceTextbox
             // 
-            this.basePriceTextbox.Location = new System.Drawing.Point(368, 94);
+            this.basePriceTextbox.Location = new System.Drawing.Point(368, 68);
             this.basePriceTextbox.Name = "basePriceTextbox";
             this.basePriceTextbox.Size = new System.Drawing.Size(100, 23);
             this.basePriceTextbox.TabIndex = 8;
@@ -171,7 +239,7 @@ namespace Prototype_for_Inventory_Management
             this.priceLabel.AutoSize = true;
             this.priceLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.priceLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.priceLabel.Location = new System.Drawing.Point(368, 74);
+            this.priceLabel.Location = new System.Drawing.Point(368, 48);
             this.priceLabel.Name = "priceLabel";
             this.priceLabel.Size = new System.Drawing.Size(67, 17);
             this.priceLabel.TabIndex = 7;
@@ -179,7 +247,7 @@ namespace Prototype_for_Inventory_Management
             // 
             // skuTextBox
             // 
-            this.skuTextBox.Location = new System.Drawing.Point(242, 94);
+            this.skuTextBox.Location = new System.Drawing.Point(242, 68);
             this.skuTextBox.Name = "skuTextBox";
             this.skuTextBox.Size = new System.Drawing.Size(100, 23);
             this.skuTextBox.TabIndex = 6;
@@ -189,7 +257,7 @@ namespace Prototype_for_Inventory_Management
             this.skuLabel.AutoSize = true;
             this.skuLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.skuLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.skuLabel.Location = new System.Drawing.Point(243, 74);
+            this.skuLabel.Location = new System.Drawing.Point(243, 48);
             this.skuLabel.Name = "skuLabel";
             this.skuLabel.Size = new System.Drawing.Size(44, 17);
             this.skuLabel.TabIndex = 5;
@@ -200,7 +268,7 @@ namespace Prototype_for_Inventory_Management
             this.itemDetailsLabel.AutoSize = true;
             this.itemDetailsLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.itemDetailsLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.itemDetailsLabel.Location = new System.Drawing.Point(242, 41);
+            this.itemDetailsLabel.Location = new System.Drawing.Point(242, 17);
             this.itemDetailsLabel.Name = "itemDetailsLabel";
             this.itemDetailsLabel.Size = new System.Drawing.Size(92, 21);
             this.itemDetailsLabel.TabIndex = 4;
@@ -208,7 +276,7 @@ namespace Prototype_for_Inventory_Management
             // 
             // itemDetailButton
             // 
-            this.itemDetailButton.Location = new System.Drawing.Point(65, 291);
+            this.itemDetailButton.Location = new System.Drawing.Point(42, 348);
             this.itemDetailButton.Name = "itemDetailButton";
             this.itemDetailButton.Size = new System.Drawing.Size(153, 23);
             this.itemDetailButton.TabIndex = 3;
@@ -218,19 +286,20 @@ namespace Prototype_for_Inventory_Management
             // 
             // newInvButton
             // 
-            this.newInvButton.Location = new System.Drawing.Point(65, 320);
+            this.newInvButton.Location = new System.Drawing.Point(42, 377);
             this.newInvButton.Name = "newInvButton";
             this.newInvButton.Size = new System.Drawing.Size(153, 23);
             this.newInvButton.TabIndex = 2;
             this.newInvButton.Text = "New Inventory Item";
             this.newInvButton.UseVisualStyleBackColor = true;
+            this.newInvButton.Click += new System.EventHandler(this.newInvButton_Click);
             // 
             // currInvLabel
             // 
             this.currInvLabel.AutoSize = true;
             this.currInvLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.currInvLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.currInvLabel.Location = new System.Drawing.Point(54, 17);
+            this.currInvLabel.Location = new System.Drawing.Point(31, 74);
             this.currInvLabel.Name = "currInvLabel";
             this.currInvLabel.Size = new System.Drawing.Size(175, 21);
             this.currInvLabel.TabIndex = 1;
@@ -243,10 +312,9 @@ namespace Prototype_for_Inventory_Management
             this.currentInventoryListBox.ItemHeight = 15;
             this.currentInventoryListBox.Items.AddRange(new object[] {
             "test"});
-            this.currentInventoryListBox.Location = new System.Drawing.Point(65, 41);
+            this.currentInventoryListBox.Location = new System.Drawing.Point(42, 98);
             this.currentInventoryListBox.Name = "currentInventoryListBox";
             this.currentInventoryListBox.Size = new System.Drawing.Size(153, 244);
-            this.currentInventoryListBox.Sorted = true;
             this.currentInventoryListBox.TabIndex = 0;
             // 
             // InventoryManagerScreen
@@ -262,6 +330,7 @@ namespace Prototype_for_Inventory_Management
             this.Text = "Inventory Manager";
             this.coloredBackPanel.ResumeLayout(false);
             this.coloredBackPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.restockCounter)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -277,7 +346,6 @@ namespace Prototype_for_Inventory_Management
         private Label skuLabel;
         private TextBox skuTextBox;
         private Button deleteItemButton;
-        private Button editItemButton;
         private ListBox warrantyListBox;
         private Label warrantyLabel;
         private TextBox furnitureTypeTextbox;
@@ -286,5 +354,12 @@ namespace Prototype_for_Inventory_Management
         private Label descLabel;
         private TextBox basePriceTextbox;
         private Label priceLabel;
+        private TextBox qtyTextBox;
+        private Label qtyLabel;
+        private Button searchButton;
+        private TextBox searchTextBox;
+        private NumericUpDown restockCounter;
+        private Button restockItemButton;
+        private Button clearSearchButton;
     }
 }
