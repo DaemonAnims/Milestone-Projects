@@ -37,6 +37,8 @@ namespace Prototype_for_Inventory_Management
         private void InitializeComponent()
         {
             this.coloredBackPanel = new System.Windows.Forms.Panel();
+            this.checkoutButton = new System.Windows.Forms.Button();
+            this.addCartButton = new System.Windows.Forms.Button();
             this.clearSearchButton = new System.Windows.Forms.Button();
             this.restockCounter = new System.Windows.Forms.NumericUpDown();
             this.restockItemButton = new System.Windows.Forms.Button();
@@ -68,6 +70,8 @@ namespace Prototype_for_Inventory_Management
             // 
             this.coloredBackPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.coloredBackPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.coloredBackPanel.Controls.Add(this.checkoutButton);
+            this.coloredBackPanel.Controls.Add(this.addCartButton);
             this.coloredBackPanel.Controls.Add(this.clearSearchButton);
             this.coloredBackPanel.Controls.Add(this.restockCounter);
             this.coloredBackPanel.Controls.Add(this.restockItemButton);
@@ -93,8 +97,28 @@ namespace Prototype_for_Inventory_Management
             this.coloredBackPanel.Controls.Add(this.currentInventoryListBox);
             this.coloredBackPanel.Location = new System.Drawing.Point(12, 12);
             this.coloredBackPanel.Name = "coloredBackPanel";
-            this.coloredBackPanel.Size = new System.Drawing.Size(538, 426);
+            this.coloredBackPanel.Size = new System.Drawing.Size(538, 448);
             this.coloredBackPanel.TabIndex = 0;
+            // 
+            // checkoutButton
+            // 
+            this.checkoutButton.Location = new System.Drawing.Point(171, 406);
+            this.checkoutButton.Name = "checkoutButton";
+            this.checkoutButton.Size = new System.Drawing.Size(177, 23);
+            this.checkoutButton.TabIndex = 25;
+            this.checkoutButton.Text = "View Cart / Checkout";
+            this.checkoutButton.UseVisualStyleBackColor = true;
+            this.checkoutButton.Click += new System.EventHandler(this.checkoutButton_Click);
+            // 
+            // addCartButton
+            // 
+            this.addCartButton.Location = new System.Drawing.Point(368, 377);
+            this.addCartButton.Name = "addCartButton";
+            this.addCartButton.Size = new System.Drawing.Size(99, 23);
+            this.addCartButton.TabIndex = 24;
+            this.addCartButton.Text = "Add To Cart";
+            this.addCartButton.UseVisualStyleBackColor = true;
+            this.addCartButton.Click += new System.EventHandler(this.addCartButton_Click);
             // 
             // clearSearchButton
             // 
@@ -362,5 +386,7 @@ namespace Prototype_for_Inventory_Management
         private NumericUpDown restockCounter;
         private Button restockItemButton;
         private Button clearSearchButton;
+        private Button checkoutButton;
+        private Button addCartButton;
     }
 }
