@@ -328,6 +328,7 @@ namespace Prototype_for_Inventory_Management
             this.Name = "InventoryManagerScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inventory Manager";
+            this.Load += new System.EventHandler(this.InventoryManagerScreen_Load);
             this.coloredBackPanel.ResumeLayout(false);
             this.coloredBackPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.restockCounter)).EndInit();
