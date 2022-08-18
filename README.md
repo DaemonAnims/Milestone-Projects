@@ -23,3 +23,8 @@ Implemented InventoryManager class, updated Item class to include quantity value
 
 Milestone 4 update: 
 Changed Item[] to List<Item> and updated functionality in InventoryManager.cs and InventoryManagerScreen.cs to allow for new change. 
+
+---
+
+Milestone 5 update: 
+Implemented new CheckoutCart form and added new functionality to InventoryManagerScreen to allow to add items to cart and checkout to display new form. Changed Item class to allow for warranties to be created as items to allow checkout functionality. 
